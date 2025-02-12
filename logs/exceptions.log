@@ -1,0 +1,102 @@
+2025-02-12 11:45:58 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'info')
+    at Server.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/server.ts:19:10)
+    at Object.onceWrapper (node:events:632:28)
+    at Server.emit (node:events:530:35)
+    at emitListeningNT (node:net:1951:10)
+    at processTicksAndRejections (node:internal/process/task_queues:81:21)
+2025-02-12 11:48:23 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(2,10): error TS2305: Module '"../config/memorystore"' has no exported member 'getValue'.
+src/services/orderbook.service.ts(2,20): error TS2305: Module '"../config/memorystore"' has no exported member 'setValue'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 11:52:32 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(7,10): error TS2305: Module '"./exchanges/binance/binance.service"' has no exported member 'fetchOrderbookBinance'.
+src/services/orderbook.service.ts(41,11): error TS2322: Type 'Orderbook | null' is not assignable to type 'Orderbook'.
+  Type 'null' is not assignable to type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 12:03:35 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(7,10): error TS2305: Module '"./exchanges/binance/binance.service"' has no exported member 'fetchOrderbookBinance'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 12:05:38 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(7,10): error TS2305: Module '"./exchanges/binance/binance.service"' has no exported member 'fetchOrderbookBinance'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 12:14:56 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(1,10): error TS2305: Module '"../utils/calculator"' has no exported member 'calculateAverage'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 12:17:56 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/huobi/huobi.service.ts(6,10): error TS2305: Module '"../../../utils/calculator"' has no exported member 'calculateAverage'.
+src/services/exchanges/huobi/huobi.service.ts(43,11): error TS2741: Property 'timestamp' is missing in type '{ ask: number; bid: number; mid: any; pair: string; exchange: string; }' but required in type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/huobi.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 14:34:48 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/kraken/kraken.service.ts(6,10): error TS2305: Module '"../../../utils/calculator"' has no exported member 'calculateAverage'.
+src/services/exchanges/kraken/kraken.service.ts(49,11): error TS2741: Property 'timestamp' is missing in type '{ ask: number; bid: number; mid: any; pair: string; exchange: string; }' but required in type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/kraken/kraken.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-3877468345609645.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
