@@ -2,8 +2,8 @@ import {MathUtils} from "../utils/calculator";
 import { memoryStore } from "../config/memorystore";
 import Orderbook from "../models/orderbook.model";
 import PriceInterface from "./price.interface";
-import { fetchOrderbookHuobi } from "./exchanges/huobi/huobi.service";
-import { fetchOrderbookKraken } from "./exchanges/kraken/kraken.service";
+import { fetchOrderbookHuobi } from "./exchanges/huobi";
+import { fetchOrderbookKraken } from "./exchanges/kraken";
 import { fetchOrderbookBinance } from "./exchanges/binance";
 
 const DEFAULT_TRADING_PAIR = "BTCUSDT";
@@ -73,21 +73,8 @@ export const fetchOrderbook = async (): Promise<void> => {
   await memoryStore.set("tradingpair", tradingPairs);
 
   clearFetchOrderbookInterval();
-  await fetchOrderbookBinance(tradingPairs); // Start Binance WebSocket first
-
-  for (const pair of tradingPairs) {
-    await Promise.all([
-      fetchOrderbookKraken(pair),
-      fetchOrderbookHuobi(pair),
-    ]);
-  }
-
-  fetchOrderbookInterval = setInterval(async () => {
-    for (const pair of tradingPairs) {
-      await Promise.all([
-        fetchOrderbookKraken(pair),
-        fetchOrderbookHuobi(pair),
-      ]);
-    }
-  }, 6000);
+  await fetchOrderbookBinance(tradingPairs);
+  await fetchOrderbookKraken(tradingPairs);
+  await fetchOrderbookHuobi(tradingPairs);
+ 
 };

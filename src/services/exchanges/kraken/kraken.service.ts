@@ -4,12 +4,10 @@ import logger from '../../../utils/logger'
 import Orderbook from '../../../models/orderbook.model'
 import { memoryStore } from "../../../config/memorystore";
 import { MathUtils } from "../../../utils/calculator";
+import config from '../../../config/config';
 
-const config = {
-  name: "kraken",
-  url: "https://api.kraken.com/0/public/Depth",
-  depth: 5,
-};
+const KrakenConfig = config.exchanges.kraken
+const name = "kraken"
 
 export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
   if (!pair) {
@@ -18,10 +16,10 @@ export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
 
   pair = pair.toUpperCase()
   try {
-    const response = await axios.get(config.url, {
+    const response = await axios.get(KrakenConfig.restUrl, {
       params: {
         pair: pair,
-        count: config.depth,
+        count: KrakenConfig.depth,
       },
     });
 
@@ -44,14 +42,14 @@ export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
     const midPrice = MathUtils.calculateAverage([bestAsk, bestBid]);
 
 
-    const pairExchange = `${config.name}-${pair}`
+    const pairExchange = `${name}-${pair}`
     await memoryStore.delete(pairExchange)
     const pairExchangeOrderbook: Orderbook = {
       ask: bestAsk,
       bid: bestBid,
       mid: midPrice,
       pair: pair,
-      exchange: config.name,
+      exchange: name,
       timestamp: 0
     }
     await memoryStore.set(pairExchange, pairExchangeOrderbook)

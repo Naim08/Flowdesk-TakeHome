@@ -12,7 +12,7 @@ const config = {
 };
 
 
-export const fetchOrderbookHuobi = async (pair: string): Promise<void> => {
+export const fetchOrderbookHuobiRest = async (pair: string): Promise<void> => {
   if (!pair) {
     return
   }

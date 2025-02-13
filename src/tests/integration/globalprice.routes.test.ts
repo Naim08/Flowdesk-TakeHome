@@ -1,12 +1,12 @@
 import request from 'supertest';
 import app from '../../app';
 import { clearFetchOrderbookInterval } from '../../services/orderbook.service';
-import { closeBinanceWebsocket } from '../../services/exchanges/binance/binance.service';
+import { binanceWS } from '../../services/exchanges/binance/binance.service';
 
 describe('Integration Test: Global Price', () => {
 
   afterAll(async () => {
-    closeBinanceWebsocket();
+    binanceWS.close();
     clearFetchOrderbookInterval();
   })
 
