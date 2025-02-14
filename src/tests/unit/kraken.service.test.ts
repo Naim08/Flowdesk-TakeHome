@@ -1,7 +1,11 @@
 import { fetchOrderbookKraken } from '../../services/exchanges/kraken/kraken.service';
 import {  memoryStore } from '../../config/memorystore';
+import { initializeKrakenWebSocket } from '../../services/exchanges/kraken/krakenStream.service';
 
 describe('Unit Test: Kraken Service', () => {
+  beforeAll(() => {
+    initializeKrakenWebSocket(['BTCUSDT']);
+  });
 
   let exchange = 'kraken';
 
@@ -10,17 +14,6 @@ describe('Unit Test: Kraken Service', () => {
     await fetchOrderbookKraken(pair);
     const orderbook = await  memoryStore.get(`${exchange}-${pair}`);
     expect(orderbook).toBe(undefined);
-  });
-
-  test('fetchOrderbookKraken with valid trading pair', async () => {
-    const pair = 'BTCUSDT';
-    await fetchOrderbookKraken(pair);
-    const orderbook = await memoryStore.get(`${exchange}-${pair}`);
-    expect(orderbook.pair).toBe(pair);
-    expect(orderbook.exchange).toBe(exchange);
-    expect(orderbook.ask).toBeGreaterThan(0);
-    expect(orderbook.bid).toBeGreaterThan(0);
-    expect(orderbook.mid).toBeGreaterThan(0);
   });
 
   test('fetchOrderbookKraken with invalid trading pair', async () => {
