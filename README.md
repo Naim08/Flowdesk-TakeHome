@@ -29,7 +29,6 @@ Your mission is to fetch the BTC/USDT order book from the three exchanges listed
 - Express.js
 
 ## Getting Started
-## Getting Started
 
 To get started with the Flowdesk Crypto Orderbook API, follow these steps:
 
