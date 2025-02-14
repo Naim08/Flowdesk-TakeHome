@@ -1,6 +1,6 @@
 // src/services/exchanges/huobi/huobi.service.ts
 import WebSocket from 'ws';
-import logger from '../../../utils/logger';
+import { logger } from '../../../utils/logger';
 import { memoryStore } from '../../../config/memorystore';
 import Orderbook from '../../../models/orderbook.model';
 import { calculateMidPrice } from '../../../utils/calculator';

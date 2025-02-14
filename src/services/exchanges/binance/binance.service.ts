@@ -1,111 +1,143 @@
-// src/services/exchanges/binance/binance.service.ts
+import axios from "axios";
 import WebSocket from 'ws';
-import logger  from '../../../utils/logger';
-import config from '../../../config/config';
-import Orderbook from '../../../models/orderbook.model';
-import { memoryStore } from '../../../config/memorystore';
-import { calculateMidPrice } from '../../../utils/calculator';
+import Depth from "./binance.interface";
+import { logger } from '../../../utils/logger'
+import Orderbook from '../../../models/orderbook.model'
+import { unsetValue, setValue } from "../../../config/memorystore";
+import { calculateAverage, calculateMidPrice } from "../../../utils/calculator";
 
-class BinanceWebSocket {
-  private ws: WebSocket | null = null;
-  private reconnectInterval = 5000;
-  private pairs: string[] = [];
-  private maxReconnectInterval = 60000; // max interval of 60 seconds
+const config = {
+  name: "binance",
+  url: 'wss://ws-api.binance.us:9443/ws-api/v3',
+  restapi: "https://api.binance.us/api/v3/depth",
+  depth: 5,
+};
 
-  constructor(pairs: string[]) {
-    this.pairs = pairs;
-    this.connect();
-  }
+var ws: WebSocket;
 
-  private connect() {
-    const wsUrl = `${config.exchanges.binance.wsUrl}`;
-    logger.info(`Connecting to Binance WebSocket at ${wsUrl}`);
-    this.ws = new WebSocket(wsUrl);
-    
-    this.ws.on('open', () => {
-      logger.info('Binance WebSocket connected');
-      this.reconnectInterval = 5000;
-      this.subscribeToPairs();
-    });
-
-    this.ws.on('message', (data: string) => {
-      this.handleMessage(data);
-    });
-
-    this.ws.on('close', (code, reason) => {
-      logger.warn(`Binance WebSocket closed: ${code} - ${reason}`);
-      this.scheduleReconnect();
-    });
-
-    this.ws.on('error', (error) => {
-      logger.error('Binance WebSocket error:', error);
-    });
-  }
-
-  private subscribeToPairs() {
-    const streams = this.pairs.map(pair => 
-      `${pair.toLowerCase()}@depth${config.exchanges.binance.depth}@100ms`
-    );
-    logger.info(`Subscribing to streams: ${JSON.stringify(streams)}`);
-    this.ws?.send(JSON.stringify({
-      method: 'SUBSCRIBE',
-      params: streams,
-      id: Date.now()
-    }));
-  }
-
-  private handleMessage(data: string) {
-    try {
-      const message = JSON.parse(data);
-      if (message.stream?.endsWith('@depth')) {
-        const pair = message.data.s.toUpperCase();
-        const bestBid = parseFloat(message.data.b[0][0]);
-        const bestAsk = parseFloat(message.data.a[0][0]);
-        
-        const orderbook: Orderbook = {
-          pair,
-          exchange: 'binance',
-          bid: bestBid,
-          ask: bestAsk,
-          mid: calculateMidPrice(bestBid, bestAsk),
-          timestamp: Date.now()
-        };
-
-        memoryStore.set(`binance-${pair}`, orderbook);
-      }
-    } catch (error) {
-      logger.error('Error processing Binance WebSocket message:', error);
-    }
-  }
-
-  private scheduleReconnect() {
-    setTimeout(() => {
-      logger.info('Attempting Binance WebSocket reconnection...');
-      this.connect();
-      // Increase the interval for subsequent attempts (exponential backoff)
-      this.reconnectInterval = Math.min(this.reconnectInterval * 2, this.maxReconnectInterval);
-    }, this.reconnectInterval);
-  }
-  
-  public updatePairs(newPairs: string[]) {
-    this.pairs = newPairs;
-    if (this.ws?.readyState === WebSocket.OPEN) {
-      this.subscribeToPairs();
-    }
-  }
-
-  public close() {
-    this.ws?.close();
-  }
-
-  // New method to check the connection state
-  public isConnected(): boolean {
-    return this.ws !== null && this.ws.readyState === WebSocket.OPEN;
-  }
+export const closeBinanceWebsocket = () => {
+  ws.close();
 }
 
-export let binanceWS: BinanceWebSocket;
+export const checkTradingPair = async (pair: string): Promise<boolean> => {
+  let foundPair: boolean = false;
+  try {
+    const response = await axios.get(config.restapi, {
+      params: {
+        symbol: pair,
+      },
+    });
 
-export const initializeBinanceWebSocket = (pairs: string[]) => {
-  binanceWS = new BinanceWebSocket(pairs);
+    if (response.status == 200) {
+      foundPair = true;
+    }
+  } catch (error) { }
+  return foundPair;
+}
+
+// export const fetchOrderbookBinance = async (pairs: string[]): Promise<void> => {
+//   if (pairs.length == 0) {
+//     return;
+//   }
+
+//   let pairParam: string[] = [];
+//   for (let i = 0; i < pairs.length; i++) {
+//     if (await checkTradingPair(pairs[i])) {
+//       pairParam.push(`${pairs[i].toLowerCase()}@depth${config.depth}@1000ms`);
+//     }
+//   }
+
+//   try {
+//     if (ws !== undefined) {
+//       ws.send(
+//         JSON.stringify({
+//           method: "SUBSCRIBE",
+//           params: pairParam,
+//           id: 1,
+//         })
+//       );
+//     } else {
+//       ws = new WebSocket(config.url);
+//     }
+
+
+//     ws.on("open", () => {
+//       ws.send(
+//         JSON.stringify({
+//           method: "SUBSCRIBE",
+//           params: pairParam,
+//           id: 1,
+//         })
+//       );
+//     });
+
+
+//     ws.on('ping', () => {
+//       ws.pong();
+//     });
+
+//     ws.on('error', async (err: any) => {
+//       logger.error('WebSocket error:', err);
+//     });
+
+//     ws.on("message", async (response: any) => {
+
+//       const data: Depth = JSON.parse(response);
+//       if (data.stream !== undefined && data.stream !== '') {
+//         const bestAsk = Math.min(...data.data.asks.map((ask) => ask[0]));
+//         const bestBid = Math.max(...data.data.bids.map((bid) => bid[0]));
+//         const midPrice = calculateAverage([bestAsk, bestBid]);
+
+//         const pair = data.stream.split('@')[0].toUpperCase()
+//         const pairExchange = `${config.name}-${pair}`
+
+//         await unsetValue(pairExchange)
+//         const pairExchangeOrderbook: Orderbook = {
+//           ask: bestAsk,
+//           bid: bestBid,
+//           mid: midPrice,
+//           pair: pair,
+//           exchange: config.name,
+//           timestamp: Date.now()
+//         }
+//         await setValue(pairExchange, pairExchangeOrderbook)
+//       }
+//     });
+
+//   } catch (error) {
+//     logger.error(`fetchOrderbookBinance: ${error}`);
+//   }
+// };
+
+
+export const fetchOrderbookBinance = async (pair: string): Promise<void> => {
+  try {
+    const symbol = pair.toUpperCase();
+    const url = `${config.restapi}?symbol=${symbol}&limit=${config.depth}`;
+    logger.info(`Fetching Binance REST orderbook for ${symbol} from ${url}`);
+    
+    const response = await axios.get(url);
+    const data = response.data;
+
+    if (data && data.bids && data.asks && data.bids.length && data.asks.length) {
+      const bestBid = parseFloat(data.bids[0][0]);
+      const bestAsk = parseFloat(data.asks[0][0]);
+      
+      const orderbook: Orderbook = {
+        pair: symbol,
+        exchange: 'binance',
+        bid: bestBid,
+        ask: bestAsk,
+        mid: calculateMidPrice(bestBid, bestAsk),
+        timestamp: Date.now()
+      };
+
+      setValue(`binance-${symbol}`, orderbook);
+      logger.info(`Updated Binance REST orderbook for ${symbol}`);
+    } else {
+      logger.warn(`Binance REST API returned incomplete data for ${symbol}`);
+    }
+  } catch (error) {
+    logger.error(`Error fetching Binance orderbook via REST for ${pair}:`, error);
+  }
 };

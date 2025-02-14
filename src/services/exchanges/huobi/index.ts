@@ -1,4 +1,4 @@
-import logger from '../../../utils/logger';
+import { logger } from '../../../utils/logger';
 import { huobiWS, initializeHuobiWebSocket } from './huobiWS.service';
 import { fetchOrderbookHuobiRest  } from './huobi.service';
 

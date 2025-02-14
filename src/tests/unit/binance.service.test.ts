@@ -1,51 +1,68 @@
-import { binanceWS, initializeBinanceWebSocket } from '../../services/exchanges/binance/binance.service';
-import { fetchOrderbookBinanceRest } from '../../services/exchanges/binance/fetchOrderbookBinanceRest';
-import { memoryStore } from '../../config/memorystore';
+import { checkTradingPair, fetchOrderbookBinance, closeBinanceWebsocket } from '../../services/exchanges/binance/binance.service';
+import { getValue, setValue } from '../../config/memorystore';
 
 describe('Unit Test: Binance Service', () => {
 
-  beforeAll(() => {
-    initializeBinanceWebSocket(['BTCUSDT', 'ETHUSDT']);
-  });
-
   let exchange = 'binance';
-  afterAll(async () => {
-    await binanceWS.close();
-  });
+
 
   test('fetchOrderbookBinance with missing pair', async () => {
     const pair = '';
-    await binanceWS.updatePairs([pair]);
-    const orderbook = await memoryStore.get(`${exchange}-${pair}`);
-    expect(orderbook).toBe(null);
+    await fetchOrderbookBinance(pair);
+    const orderbook = await getValue(`${exchange}-${pair}`);
+    expect(orderbook).toBe(undefined);
   });
 
   test('checkTradingPair with valid trading pair', async () => {
     const pair = 'BTCUSDT';
-    const result = await fetchOrderbookBinanceRest(pair);
-    expect(result).toBe(undefined);
+    const result = await checkTradingPair(pair);
+    expect(result).toBe(true);
   });
 
   test('checkTradingPair with invalid trading pair', async () => {
     const pair = 'INVALID';
-    const result = await fetchOrderbookBinanceRest(pair);
-    expect(result).toBe(undefined);
+    const result = await checkTradingPair(pair);
+    expect(result).toBe(false);
   });
 
 
-
-
-  test('fetchOrderbookBinance with invalid trading pair', async () => {
-    const pairs = ['INVALIDONE', 'INVALIDTWO'];
-    binanceWS.updatePairs(pairs);
+  test('fetchOrderbookBinance with valid trading pairs', async () => {
+    const pairs = ['BTCUSDT', 'ETHUSDT'];
+    for (let pair of pairs) {
+      await fetchOrderbookBinance(pair);
+    }
 
     await new Promise(resolve => setTimeout(resolve, 5000));
 
-    const orderbookOne = await memoryStore.get(`${exchange}-${pairs[0]}`);
-    expect(orderbookOne).toBe(null);
+    const orderbookOne = await getValue(`${exchange}-${pairs[0]}`);
+    expect(orderbookOne.pair).toBe(pairs[0]);
+    expect(orderbookOne.exchange).toBe(exchange);
+    expect(orderbookOne.ask).toBeGreaterThan(0);
+    expect(orderbookOne.bid).toBeGreaterThan(0);
+    expect(orderbookOne.mid).toBeGreaterThan(0);
 
-    const orderbookTwo = await memoryStore.get(`${exchange}-${pairs[1]}`);
-    expect(orderbookTwo).toBe(null);
+
+    const orderbookTwo = await getValue(`${exchange}-${pairs[1]}`);
+    expect(orderbookTwo.pair).toBe(pairs[1]);
+    expect(orderbookTwo.exchange).toBe(exchange);
+    expect(orderbookTwo.ask).toBeGreaterThan(0);
+    expect(orderbookTwo.bid).toBeGreaterThan(0);
+    expect(orderbookTwo.mid).toBeGreaterThan(0);
+  }, 10000);
+
+  test('fetchOrderbookBinance with invalid trading pair', async () => {
+    const pairs = ['INVALIDONE', 'INVALIDTWO'];
+    for (let pair of pairs) {
+      await fetchOrderbookBinance(pair);
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    const orderbookOne = await getValue(`${exchange}-${pairs[0]}`);
+    expect(orderbookOne).toBe(undefined);
+
+    const orderbookTwo = await getValue(`${exchange}-${pairs[1]}`);
+    expect(orderbookTwo).toBe(undefined);
   }, 10000);
 
 });

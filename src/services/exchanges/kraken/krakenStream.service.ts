@@ -1,9 +1,9 @@
 import WebSocket from 'ws';
-import logger from '../../../utils/logger';
+import { logger } from '../../../utils/logger';
 import config from '../../../config/config';
 import Orderbook from '../../../models/orderbook.model';
 import { memoryStore } from '../../../config/memorystore';
-import { MathUtils } from '../../../utils/calculator';
+import { calculateAverage } from '../../../utils/calculator';
 
 // The Kraken WebSocket URL and depth are obtained from your config
 class KrakenWebSocket {
@@ -102,7 +102,7 @@ class KrakenWebSocket {
               exchange: 'kraken',
               bid: bestBid,
               ask: bestAsk,
-              mid: MathUtils.calculateAverage([bestAsk, bestBid]),
+              mid: calculateAverage([bestAsk, bestBid]),
               timestamp: Date.now()
             };
             memoryStore.set(`kraken-${pair.toUpperCase()}`, orderbook);

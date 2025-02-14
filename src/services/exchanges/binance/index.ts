@@ -1,7 +1,7 @@
 // src/services/exchanges/binance/binance.service.ts
 import { binanceWS, initializeBinanceWebSocket } from './binance.service';
 import { fetchOrderbookBinanceRest } from './fetchOrderbookBinanceRest';
-import logger from '../../../utils/logger';
+import {logger} from '../../../utils/logger';
 
 /**
  * Ensures Binance WebSocket is running and listening to the given pairs.

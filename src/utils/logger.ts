@@ -8,7 +8,7 @@ const logFormat = printf(({ level, message, timestamp, stack }) => {
   return `${timestamp} [${level}]: ${stack || message}`;
 });
 
-const logger = createLogger({
+export const logger = createLogger({
   level: config.app.environment === 'production' ? 'info' : 'debug',
   format: combine(
     colorize(),
@@ -32,5 +32,3 @@ const logger = createLogger({
     new transports.File({ filename: 'logs/exceptions.log' })
   ]
 });
-
-export default logger;

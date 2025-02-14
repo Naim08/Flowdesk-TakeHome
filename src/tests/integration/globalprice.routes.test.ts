@@ -1,16 +1,12 @@
 import request from 'supertest';
 import app from '../../app';
 import { clearFetchOrderbookInterval } from '../../services/orderbook.service';
-import { binanceWS, initializeBinanceWebSocket } from '../../services/exchanges/binance/binance.service';
+import { closeBinanceWebsocket } from '../../services/exchanges/binance/binance.service';
 
 describe('Integration Test: Global Price', () => {
 
-  beforeAll(() => {
-    initializeBinanceWebSocket(['BTCUSDT', 'ETHUSDT']);
-  });
-  
   afterAll(async () => {
-    binanceWS.close();
+   
     clearFetchOrderbookInterval();
   })
 

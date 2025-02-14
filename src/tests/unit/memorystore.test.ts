@@ -1,10 +1,10 @@
-import { memoryStore } from '../../config/memorystore';
+import { setValue, getValue } from '../../config/memorystore';
 
 describe('Unit Test: Memory Store', () => {
 
-  test('set and get with key and value', async () => {
-    memoryStore.set('tradingpair', ['BTCUSDT']);
-    const tradingpair = await  memoryStore.get('tradingpair');
+  test('setValue and getValue with key and value', async () => {
+    setValue('tradingpair', ['BTCUSDT']);
+    const tradingpair = await getValue('tradingpair');
     expect(tradingpair).toContain('BTCUSDT');
   });
 

@@ -1,13 +1,15 @@
 import axios from "axios";
 import Depth from "./kraken.interface";
-import logger from '../../../utils/logger'
+import { logger } from '../../../utils/logger'
 import Orderbook from '../../../models/orderbook.model'
-import { memoryStore } from "../../../config/memorystore";
-import { MathUtils } from "../../../utils/calculator";
-import config from '../../../config/config';
+import { unsetValue, setValue } from "../../../config/memorystore";
+import { calculateAverage } from "../../../utils/calculator";
 
-const KrakenConfig = config.exchanges.kraken
-const name = "kraken"
+const config = {
+  name: "kraken",
+  url: "https://api.kraken.com/0/public/Depth",
+  depth: 5,
+};
 
 export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
   if (!pair) {
@@ -16,10 +18,10 @@ export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
 
   pair = pair.toUpperCase()
   try {
-    const response = await axios.get(KrakenConfig.restUrl, {
+    const response = await axios.get(config.url, {
       params: {
         pair: pair,
-        count: KrakenConfig.depth,
+        count: config.depth,
       },
     });
 
@@ -39,23 +41,22 @@ export const fetchOrderbookKraken = async (pair: string): Promise<void> => {
 
     const bestAsk = Math.min(...data.result[resultKey].asks.map((ask) => ask[0]));
     const bestBid = Math.max(...data.result[resultKey].bids.map((bid) => bid[0]));
-    const midPrice = MathUtils.calculateAverage([bestAsk, bestBid]);
+    const midPrice = calculateAverage([bestAsk, bestBid]);
 
 
-    const pairExchange = `${name}-${pair}`
-    await memoryStore.delete(pairExchange)
+    const pairExchange = `${config.name}-${pair}`
+    await unsetValue(pairExchange)
     const pairExchangeOrderbook: Orderbook = {
       ask: bestAsk,
       bid: bestBid,
       mid: midPrice,
       pair: pair,
-      exchange: name,
-      timestamp: 0
+      exchange: config.name,
+      timestamp: Date.now()
     }
-    await memoryStore.set(pairExchange, pairExchangeOrderbook)
+    await setValue(pairExchange, pairExchangeOrderbook)
 
   } catch (error) {
     logger.error(`catch fetchOrderbookKraken: ${error}`);
   }
 };
-

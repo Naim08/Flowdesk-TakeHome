@@ -4,7 +4,7 @@ import config from '../../../config/config';
 import Orderbook from '../../../models/orderbook.model';
 import { memoryStore } from '../../../config/memorystore';
 import { calculateMidPrice } from '../../../utils/calculator';
-import logger from '../../../utils/logger';
+import {logger} from '../../../utils/logger';
 
 export const fetchOrderbookBinanceRest = async (pair: string): Promise<void> => {
   try {
