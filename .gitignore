@@ -3,4 +3,5 @@ coverage/
 dist/
 package-lock.json
 .env
-README.md
+
+.DS_Store
