@@ -3,6 +3,8 @@ import { getValue } from '../../config/memorystore';
 import Orderbook from '../../models/orderbook.model';
 import { clearFetchOrderbookInterval, tradingpairExists } from '../../services/orderbook.service';
 import { closeBinanceWebsocket } from '../../services/exchanges/binance/binance.service';
+import { closeKrakenWebsocket } from '../../services/exchanges/kraken/kraken.service';
+import { closeHuobiWebsocket } from '../../services/exchanges/huobi/huobi.service';
 
 describe('Unit Test: Orderbook Service', () => {
 
@@ -11,6 +13,9 @@ describe('Unit Test: Orderbook Service', () => {
   })
   afterAll(async () => {
     clearFetchOrderbookInterval();
+    closeBinanceWebsocket();
+    closeKrakenWebsocket();
+    closeHuobiWebsocket();
   })
 
   test('tradingpairExists with BTCUSDT', async () => {

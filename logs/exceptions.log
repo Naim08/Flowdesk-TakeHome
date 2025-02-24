@@ -100,3 +100,346 @@ src/services/exchanges/kraken/kraken.service.ts(49,11): error TS2741: Property '
     at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1288:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 18:34:19 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(80,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+src/services/orderbook.service.ts(88,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6629056141157448.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6629056141157448.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6629056141157448.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 18:34:33 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(80,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+src/services/orderbook.service.ts(88,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 18:35:54 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/kraken/krakenStream.service.ts(98,70): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/services/exchanges/kraken/krakenStream.service.ts(99,70): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/kraken/krakenStream.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8162970059699026.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 18:53:42 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(78,3): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 19:03:50 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(5,37): error TS2306: File '/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/index.ts' is not a module.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-12 19:05:07 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(5,37): error TS2306: File '/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/index.ts' is not a module.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4441388689152812.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:44:42 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(1,10): error TS2305: Module '"../utils/calculator"' has no exported member 'calculateAverage'.
+src/services/orderbook.service.ts(2,10): error TS2305: Module '"../config/memorystore"' has no exported member 'getValue'.
+src/services/orderbook.service.ts(2,20): error TS2305: Module '"../config/memorystore"' has no exported member 'setValue'.
+src/services/orderbook.service.ts(6,10): error TS2724: '"./exchanges/huobi/huobi.service"' has no exported member named 'fetchOrderbookHuobi'. Did you mean 'fetchOrderbookHuobiRest'?
+src/services/orderbook.service.ts(8,10): error TS2305: Module '"./exchanges/binance/binance.service"' has no exported member 'fetchOrderbookBinance'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-9994341464093199.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-9994341464093199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-9994341464093199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:54:24 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/routes/globalprice.routes.ts(15,13): error TS2304: Cannot find name 'addTradingPair'.
+src/routes/globalprice.routes.ts(18,7): error TS2304: Cannot find name 'logger'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/routes/globalprice.routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-051551752387448246.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-051551752387448246.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-051551752387448246.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:55:20 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/routes/globalprice.routes.ts(15,13): error TS2304: Cannot find name 'addTradingPair'.
+src/routes/globalprice.routes.ts(18,7): error TS2304: Cannot find name 'logger'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/routes/globalprice.routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:56:04 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/huobi/huobi.service.ts(43,11): error TS2741: Property 'timestamp' is missing in type '{ ask: number; bid: number; mid: number; pair: string; exchange: string; }' but required in type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/huobi.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:58:48 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/kraken/kraken.service.ts(49,11): error TS2741: Property 'timestamp' is missing in type '{ ask: number; bid: number; mid: number; pair: string; exchange: string; }' but required in type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/kraken/kraken.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 14:59:00 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/binance/binance.service.ts(95,15): error TS2741: Property 'timestamp' is missing in type '{ ask: number; bid: number; mid: number; pair: string; exchange: string; }' but required in type 'Orderbook'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/binance/binance.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-1635474071276375.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 15:05:07 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/binance/binance.service.ts(131,14): error TS2304: Cannot find name 'calculateMidPrice'.
+src/services/exchanges/binance/binance.service.ts(135,7): error TS2304: Cannot find name 'memoryStore'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/binance/binance.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4151896149370926.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4151896149370926.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-4151896149370926.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-14 15:05:50 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(94,31): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-16083105719519297.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-16083105719519297.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-16083105719519297.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 14:18:46 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/orderbook.service.ts(8,10): error TS2305: Module '"./exchanges/binance/binance.service"' has no exported member 'fetchOrderbookBinance'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/orderbook.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6371016971064574.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6371016971064574.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-6371016971064574.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 14:56:59 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/huobi/huobi.service.ts(104,43): error TS2353: Object literal may only specify known properties, and 'to' does not exist in type 'CompressCallback'.
+src/services/exchanges/huobi/huobi.service.ts(107,30): error TS2345: Argument of type 'void' is not assignable to parameter of type 'string'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/huobi.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 14:57:10 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/services/exchanges/huobi/huobi.service.ts(3,25): error TS7016: Could not find a declaration file for module 'pako'. '/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/pako/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/pako` if it exists or add a new declaration (.d.ts) file containing `declare module 'pako';`
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/services/exchanges/huobi/huobi.service.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-8548598945887795.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:09:12 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/routes/globalprice.routes.ts(57,33): error TS2554: Expected 2 arguments, but got 1.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/routes/globalprice.routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:14:33 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/routes/globalprice.routes.ts(57,33): error TS2554: Expected 2 arguments, but got 1.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/routes/globalprice.routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:14:36 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/routes/globalprice.routes.ts(57,33): error TS2554: Expected 2 arguments, but got 1.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/routes/globalprice.routes.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:19:57 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/controllers/globalprice.controller.ts(14,13): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+src/controllers/globalprice.controller.ts(15,11): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+src/controllers/globalprice.controller.ts(16,29): error TS2304: Cannot find name 'userPair'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/controllers/globalprice.controller.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:20:21 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/controllers/globalprice.controller.ts(14,13): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+src/controllers/globalprice.controller.ts(15,11): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/controllers/globalprice.controller.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:20:44 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/controllers/globalprice.controller.ts(14,13): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+src/controllers/globalprice.controller.ts(15,11): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/controllers/globalprice.controller.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:20:45 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/controllers/globalprice.controller.ts(14,13): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+src/controllers/globalprice.controller.ts(15,11): error TS2451: Cannot redeclare block-scoped variable 'pair'.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/controllers/globalprice.controller.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+2025-02-24 15:22:48 [[31merror[39m]: Error: ⨯ Unable to compile TypeScript:
+src/controllers/globalprice.controller.ts(16,34): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+
+    at Object.<anonymous> (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/src/controllers/globalprice.controller.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._compile (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/source-map-support/source-map-support.js:521:25)
+    at Module.m._compile (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/jw/1j90thl521bcm2j3grbsh8j00000gn/T/ts-node-dev-hook-5306209233586083.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/Naim/Desktop/flowdesk-crypto-orderbook-api-main/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)

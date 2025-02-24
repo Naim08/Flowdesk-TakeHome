@@ -56,10 +56,6 @@ const normalizeWeights = (
   ];
 };
 
-/**
- * Calculate the mid-price between best bid and best ask
- * @throws {Error} When inputs are not finite or bestBid > bestAsk
- */
 export const calculateMidPrice = (bestBid: number, bestAsk: number): number => {
   validateFiniteNumber(bestBid);
   validateFiniteNumber(bestAsk);
